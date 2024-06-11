@@ -10,7 +10,7 @@ function App() {
     <>
       <Switch>
         <Route exact path="/">
-          <h1>Weolcome to Netflix by Wit</h1>
+          <h1>Welcome to Netflix by Wit</h1>
         </Route>
         <Route exact path="/login">
           <Header />
