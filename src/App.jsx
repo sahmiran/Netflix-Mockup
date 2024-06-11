@@ -1,7 +1,37 @@
+import { Route, Switch, Link } from "react-router-dom";
 import "./App.css";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Welcome from "./pages/Welcome";
+import Header from "./components/Header/Header";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Switch>
+        <Route exact path="/">
+          <h1>Weolcome to Netflix by Wit</h1>
+        </Route>
+        <Route exact path="/login">
+          <Header />
+          <Login />
+        </Route>
+        <Route exact path="/welcome">
+          <Welcome />
+        </Route>
+        <Route exact path="/home">
+          <Header />
+          <Home />
+        </Route>
+      </Switch>
+      <div className="dev-navigation">
+        <Link to="/">HomePage</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/welcome">Welcome</Link>
+        <Link to="/home">Home</Link>
+      </div>
+    </>
+  );
 }
 
 export default App;
